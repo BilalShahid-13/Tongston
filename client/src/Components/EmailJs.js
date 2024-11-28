@@ -3,8 +3,8 @@ import emailjs from "emailjs-com"; // Import the emailjs library
 async function sendEmail(name, email) {
   try {
     const response = await emailjs.send(
-      "service_7ymbc4a",
-      "template_h62rw8s",
+      "service_z3uzwhg",
+      "template_a2mxlpn",
       {
         to_name: name,
         subject:
@@ -14,7 +14,7 @@ async function sendEmail(name, email) {
           "Congratulations! 🎉 Your initial sign-up has been successfully completed on T-World...",
         reply_to: "t-world@tongston.com",
       },
-      "uNbdDy5vJyK-ScLts" // Your EmailJS User ID
+      "CDmJ3huYpinZb0wEA" // Your EmailJS User ID
     );
 
     // Log the response for debugging
