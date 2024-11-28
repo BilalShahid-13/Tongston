@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+.navbar {
+  /* background-color: rgb(255, 255, 255,0.2); */
+  background-color: transparent;
+}
+
+::selection {
+  background-color: rgb(255, 242, 0);
+  color: #333;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Force white background in dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white !important; /* Ensure the background stays white */
+    color: black !important; /* Optional: Change text color to black if needed */
+  }
+}

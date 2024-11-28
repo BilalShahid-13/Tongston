@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.footer-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.footer-link-container {
+  background-color: transparent;
+}
