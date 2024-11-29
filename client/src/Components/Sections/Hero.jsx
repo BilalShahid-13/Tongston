@@ -88,16 +88,18 @@ const Hero = () => {
           flexDirection={"column"}
           alignItems={"center"}
           display={"flex"}
+          gap={{ md: "2vh", lg: "2vh", base: "1vh" }}
         >
+
           <Box
             justifyContent={"center"}
             alignItems={"center"}
             display={"flex"}
-            mt={{ md: "75vh", lg: "80vh", base: "80vh" }}
+            mt={{ md: "75vh", lg: "77vh", base: "80vh" }}
             flexDirection={"column"}
             backgroundColor={"rgba(255, 255, 255, 0.2)"}
             backdropFilter={"blur(2px)"}
-            gap={{ md: "2vh", lg: "3vh", base: "1vh" }}
+            gap={{ md: "2vh", lg: "5vh", base: "1vh" }}
             padding={{ md: "1vh 2vw", lg: "2vh 3vw", base: "1vh 2vw" }}
             rounded={"md"}
           >
@@ -109,7 +111,7 @@ const Hero = () => {
               textAlign={"center"}
               fontFamily={"montserrat"}
             >
-              become a vip employee / employer
+              Become a vip employee / employer
             </Heading>
           </Box>
 

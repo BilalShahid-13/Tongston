@@ -124,19 +124,31 @@ const Rewards = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
           px={"2vw"}
+
           ref={title}
         >
           {/* increasae your toins */}
-          <Heading
-            w={{ md: "70%", lg: "100%", base: "100%" }}
-            textColor={"black"}
-            textAlign={{ md: "center", lg: "center", base: "center" }}
-            fontFamily={"montserrat"}
-            ref={headingRef}
-            fontSize={{ md: "lg", lg: "2xl", base: "sm" }}
-          >
-            COLLECT TOINS WITH EVERY ACTION ON T-WORLD
-          </Heading>
+          <Flex display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={'column'}
+            gap='1vh' w={{ md: "70%", lg: "100%", base: "100%" }}>
+            <Flex display={'flex'} flexDir={'row'} justifyContent={'center'}
+              alignItems={'center'}>
+              <Image ref={headingRef} src="/toins.png" w={{ md: "30%", lg: "20%", base: "20%" }} />
+              <Heading
+                textColor={"black"}
+                textAlign={{ md: "center", lg: "right", base: "center" }}
+                fontFamily={"montserrat"}
+                ref={headingRef}
+                fontSize={{ md: "lg", lg: "2xl", base: "sm" }}
+              >
+                COLLECT TOINS WITH EVERY ACTION ON T-WORLD
+              </Heading>
+            </Flex>
+            <Text fontFamily={"montserrat"}
+              fontSize={{ md: "lg", lg: "xl", base: "sm" }}>COLLECT TOINS</Text>
+          </Flex>
           <Flex ref={titleImg} w={{ md: "60%", base: "50%", lg: "50%" }}>
             <video
               autoPlay
