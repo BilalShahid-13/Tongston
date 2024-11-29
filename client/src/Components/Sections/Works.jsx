@@ -47,7 +47,7 @@ const Works = () => {
   }, [Early_Benefits]);
 
   return (
-    <Box maxW="container.lg" mx="auto" px="4" py="8" fontFamily={"montserrat"}>
+    <Box maxW="container.lg" mx="auto" px="4" py="8" fontFamily={"montserrat"} id='works'>
       <Box
         className="early-signup-banner"
         maxW="2xl"

@@ -208,6 +208,7 @@ const Signup = () => {
     setHighEducation("");
     setCheckboxValues("");
     setSignUpButton("");
+    setAcheivermentsCheckbox([])
   }
 
   async function apiCall() {
@@ -216,8 +217,8 @@ const Signup = () => {
     try {
       // Making the POST request to the backend
       const response = await axios.post(
-        // "https://tongston-api.vercel.app/register/signup",
-        "http://localhost:8000/register/signup",
+        "https://tongston-api.vercel.app/register/signup",
+        // "http://localhost:8000/register/signup",
         {
           firstName,
           email,
@@ -244,7 +245,7 @@ const Signup = () => {
           duration: 5000,
           isClosable: true,
         });
-        // Clear();
+        Clear();
         setReferralCode(response.data.referral.referralCode);
         setReferralCount(response.data.referral.referralCount);
         if (

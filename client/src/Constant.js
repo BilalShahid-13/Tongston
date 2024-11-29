@@ -3,23 +3,23 @@
 const NavbarItems = [
   {
     name: "Home",
-    path: "#",
+    path: "Home",
   },
   {
     name: "How does it Work",
-    path: "#about",
+    path: "works",
   },
   {
     name: "Services",
-    path: "#services",
+    path: "Services",
   },
   {
     name: "Contact",
-    path: "#contact",
+    path: "Contact",
   },
   {
     name: "Ask the T-World Chatbot",
-    path: "#chatbot",
+    path: "chatbot",
   },
 ];
 

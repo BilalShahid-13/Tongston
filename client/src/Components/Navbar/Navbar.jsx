@@ -202,7 +202,7 @@ const Navbar = () => {
                   chatbotToggleButton.click();
                 }
               }
-              scrollToSection(item.name);
+              scrollToSection(item.path);
             }}
             _hover={{
               textDecoration: "none",
@@ -273,7 +273,7 @@ const Navbar = () => {
               backgroundColor: "#fac914",
             }}
             onClick={() => {
-              scrollToSection("signup");
+              scrollToSection("signup2");
               setIsMenuOpen(false); // Close menu after clicking "Get Started"
             }}
             textColor="#333"
@@ -303,7 +303,7 @@ const Navbar = () => {
             backgroundColor: "#fac914",
           }}
           onClick={() => {
-            scrollToSection("signup");
+            scrollToSection("signup2");
           }}
           textColor="#333"
           transition="all 0.5s ease"
