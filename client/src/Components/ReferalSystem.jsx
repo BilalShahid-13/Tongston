@@ -190,7 +190,7 @@ const ReferalSystem = ({
           justifyContent={"center"}
           alignItems={"center"}
           display={"flex"}
-          // w={"full"}
+        // w={"full"}
         >
           Get
           <span
@@ -220,7 +220,7 @@ const ReferalSystem = ({
         alignItems={"center"}
       >
         {ReferralLinks.map((item, index) => (
-          <Tooltip hasArrow label={item.name} key={index}>
+          <Tooltip hasArrow label={item.name} key={index} bgColor={'#fff200'} color={'black'}>
             <Box
               as={item.component}
               url={referralLink}
@@ -228,14 +228,15 @@ const ReferalSystem = ({
               alignItems="center"
               justifyContent="center"
               bg={hasCopied ? "green" : "#fff200"}
-              _hover={{ bg: "#fac913" }}
               px="1.3vw"
               py={{ md: "2vh", lg: "4vh", base: "1vh" }}
               fontSize={{ md: "2xl", lg: "3xl", base: "md" }}
               borderRadius="md"
               cursor="pointer"
             >
-              <item.icon />
+              <Button bgColor={'#fff200'} _hover={{ bg: "#fac913" }}>
+                <item.icon />
+              </Button>
             </Box>
           </Tooltip>
         ))}
