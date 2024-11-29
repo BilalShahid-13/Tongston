@@ -7,6 +7,7 @@ import gsap from "gsap";
 import VideoPlayer from "../Features/VideoPlayer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import NotFound from '../NotFound'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,7 +146,7 @@ const Features = () => {
       {/* Routes Section */}
       <Routes>
         <Route
-          path="/dashboard"
+          path={FeatureLists[0].link}
           element={
             <Flex
               ref={dashboardRef}
@@ -168,6 +169,7 @@ const Features = () => {
             }
           />
         ))}
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
   );
