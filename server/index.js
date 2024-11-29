@@ -11,13 +11,13 @@ const app = express();
 const { PORT } = process.env; // Port for the backend server
 
 const corsOptions = {
-  origin: "https://tongston.vercel.app/", // Only allow your backend to access the APIs
+  origin: "https://tongston.vercel.app", // Corrected: Remove trailing slash
   methods: ["GET", "POST", "PUT", "DELETE"], // List allowed HTTP methods
   allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
 };
 
 // Middleware setup
-app.use(cors({ corsOptions })); // Allow cross-origin requests
+app.use(cors(corsOptions));
 // app.use(cors({ origin: "*" })); // Allow cross-origin requests
 app.use(express.json());
 app.use(bodyParser.json()); // Parse JSON bodies from incoming requests

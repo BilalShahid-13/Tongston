@@ -217,8 +217,7 @@ const Signup = () => {
     try {
       // Making the POST request to the backend
       const response = await axios.post(
-        "https://tongston-api.vercel.app/register/signup",
-        // "http://localhost:8000/register/signup",
+        "https://tongston-api.vercel.app/register/signup",  // Use your correct API URL
         {
           firstName,
           email,
@@ -231,6 +230,11 @@ const Signup = () => {
           features: checkboxValues || [],
           referredBy: referredBy,
           acheivermentsCheckbox,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',  // Specify content type as JSON
+          },
         }
       );
       if (response.status === 201) {
