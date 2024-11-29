@@ -6,7 +6,7 @@ const NavbarItems = [
     path: "Home",
   },
   {
-    name: "How does it Work",
+    name: "Here’s How it works",
     path: "works",
   },
   {
