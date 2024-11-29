@@ -283,6 +283,16 @@ const Early_Benefits = [
   " Be part of an exclusive network of early adopters",
 ];
 
+const WorkList = [
+  "Free Sign up & EARN",
+  "Set up your profile & EARN.",
+  "Set up your goals & EARN.",
+  "T-World’s AI starts learning from your profile, goals and actions, creating personalized solutions in education, enterprise, media & finance to attain your goals.",
+  "Climb the leaderboards and show off your achievements.",
+  "Earn rewards—both cash and toins—every time you complete",
+  "activities, reach milestones towards your goals, and even refer friends. Where should I place this content?",
+];
+
 const Footer = [
   {
     headline: "Our Buisness",
@@ -427,4 +437,5 @@ export {
   FooterLinks,
   ReferralLinks,
   Acheivements_TWorld,
+  WorkList,
 };
