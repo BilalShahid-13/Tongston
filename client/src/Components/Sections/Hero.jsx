@@ -111,7 +111,7 @@ const Hero = () => {
               textAlign={"center"}
               fontFamily={"montserrat"}
             >
-              Become a vip employee / employer
+              Become a VIP Employee / Employer
             </Heading>
           </Box>
 
