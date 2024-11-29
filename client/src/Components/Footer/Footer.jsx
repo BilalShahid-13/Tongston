@@ -19,8 +19,9 @@ import {
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
-  FaPhoneAlt,
+  FaYoutube
 } from "react-icons/fa";
+import { CiGlobe } from "react-icons/ci";
 import { scrollToSection } from "../../Constant";
 
 const Footer = () => {
@@ -46,6 +47,14 @@ const Footer = () => {
                   _hover={{ color: "yellow.400" }}
                 />
                 <Text srOnly>Tongston on Facebook</Text>
+              </Link>
+              <Link href="https://www.youtube.com/@tongstonentrepreneurshipgr7" isExternal>
+                <Icon
+                  as={FaYoutube}
+                  boxSize="6"
+                  _hover={{ color: "yellow.400" }}
+                />
+                <Text srOnly>Tongston on Youtube</Text>
               </Link>
               <Link href="https://twitter.com/tongston" isExternal>
                 <Icon
@@ -86,11 +95,11 @@ const Footer = () => {
             </Heading>
             <Flex align="center" gap="2">
               <Icon as={FaEnvelope} boxSize="5" />
-              <Text>support@tongston.com</Text>
+              <Text> t-world@tongston.com</Text>
             </Flex>
             <Flex align="center" gap="2">
-              <Icon as={FaPhoneAlt} boxSize="5" />
-              <Text>+1 (123) 456-7890</Text>
+              <Icon as={CiGlobe} boxSize="5" />
+              <a href="https://www.tongston.com">www.tongston.com</a>
             </Flex>
           </VStack>
 
@@ -102,7 +111,7 @@ const Footer = () => {
             alignItems={{ md: "flex-start", lg: "flex-start", base: "center" }}
           >
             <Heading as="h3" size="md" color="yellow.400" mb="4">
-              Why Join Tongston?
+              Why Join T-World
             </Heading>
             <List spacing="2">
               <ListItem display="flex" alignItems="center">
@@ -123,10 +132,10 @@ const Footer = () => {
               w="full"
               mt="4"
               onClick={() => {
-                scrollToSection("signup");
+                scrollToSection("signup2");
               }}
             >
-              Join Tongston Now
+              Join T-World Now
             </Button>
           </VStack>
         </Grid>

@@ -183,7 +183,8 @@ const Signup = () => {
 
   async function Signup() {
     if (Validate()) {
-      await apiCall();
+      // await apiCall();
+      await sendEmail(firstName, email, referredBy);
     }
   }
 
@@ -526,51 +527,61 @@ const Signup = () => {
             )}
             {/* professional */}
             {choosedOption === "2" && (
-              <Select
-                placeholder="Select option"
-                w={{ md: "70%", base: "85%" }}
-                _focus={{
-                  borderColor: "rgb(250, 201, 20)", // Custom border color
-                  boxShadow: "0 0 0 1px rgb(250, 201, 20)", // Optional: add an outline effect
-                }}
-                onChange={(e) => {
-                  setOptionSelect(e.target.value);
-                  setHighEducation(null);
-                }}
-              >
-                {ProfessionalList.map((option, index) => (
-                  <option key={index} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </Select>
+              <>
+                <Text fontWeight={"semibold"}>
+                  which industry / sector are you in?
+                </Text>
+                <Select
+                  placeholder="Select option"
+                  w={{ md: "70%", base: "85%" }}
+                  _focus={{
+                    borderColor: "rgb(250, 201, 20)", // Custom border color
+                    boxShadow: "0 0 0 1px rgb(250, 201, 20)", // Optional: add an outline effect
+                  }}
+                  onChange={(e) => {
+                    setOptionSelect(e.target.value);
+                    setHighEducation(null);
+                  }}
+                >
+                  {ProfessionalList.map((option, index) => (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </Select>
+              </>
             )}
             {/* higher education student */}
             {choosedOption === "3" && (
-              <Select
-                placeholder="Select option"
-                w={{ md: "70%", base: "85%" }}
-                onChange={(e) => {
-                  // setOptionSelect(e.target.value);
-                  setHighEducation(e.target.value);
-                }}
-                _focus={{
-                  borderColor: "rgb(250, 201, 20)", // Custom border color
-                  boxShadow: "0 0 0 1px rgb(250, 201, 20)", // Optional: add an outline effect
-                }}
-              >
-                {HigherEducationStudent.map((option, index) => (
-                  <option
-                    onChange={setHighEducation}
-                    key={index}
-                    value={option}
-                    style={{ fontFamily: "montserrat" }}
-                    className="montserrat"
-                  >
-                    {option}
-                  </option>
-                ))}
-              </Select>
+              <>
+                <Text fontWeight={"semibold"}>
+                  Are you interested in?
+                </Text>
+                <Select
+                  placeholder="Select option"
+                  w={{ md: "70%", base: "85%" }}
+                  onChange={(e) => {
+                    // setOptionSelect(e.target.value);
+                    setHighEducation(e.target.value);
+                  }}
+                  _focus={{
+                    borderColor: "rgb(250, 201, 20)", // Custom border color
+                    boxShadow: "0 0 0 1px rgb(250, 201, 20)", // Optional: add an outline effect
+                  }}
+                >
+                  {HigherEducationStudent.map((option, index) => (
+                    <option
+                      onChange={setHighEducation}
+                      key={index}
+                      value={option}
+                      style={{ fontFamily: "montserrat" }}
+                      className="montserrat"
+                    >
+                      {option}
+                    </option>
+                  ))}
+                </Select>
+              </>
             )}
 
             {/* secure a job */}
