@@ -15,7 +15,7 @@ const calculateTimeLeft = (targetDate) => {
   const currentTime = new Date().getTime(); // Get current time
   const difference = targetTime - currentTime; // Calculate remaining time in milliseconds
 
-  if (difference <= 0) return 0; // If time is up, return 0
+  if (difference <= 0) return ''; // If time is up, return 0
 
   return difference;
 };
@@ -46,6 +46,9 @@ const CountdownTimer = ({ targetDate }) => {
   const taglineRef = useRef(null);
 
   useEffect(() => {
+    const elementsToAnimate = progressRef.current
+      ? [...progressRef.current.children, buttonRef.current, taglineRef.current]
+      : [buttonRef.current, taglineRef.current];
     gsap.fromTo(
       textRef.current,
       {
@@ -62,7 +65,7 @@ const CountdownTimer = ({ targetDate }) => {
       }
     );
     gsap.fromTo(
-      [progressRef.current.children, buttonRef.current, taglineRef.current],
+      elementsToAnimate,
       {
         opacity: 0,
         y: -100,
@@ -129,7 +132,7 @@ const CountdownTimer = ({ targetDate }) => {
           <Flex gap={{ md: "2vw", lg: "2vw", base: "3vw" }} ref={progressRef}>
             {/* days */}
             <CircularProgress
-              value={(days / 30) * 100}
+              value={(days / (timeLeft > 0 ? 30 : 1)) * 100}
               color="#fac913"
               trackColor={"#fff200"}
               borderRadius="100vw"
@@ -231,7 +234,8 @@ const CountdownTimer = ({ targetDate }) => {
             TEES2024
           </Text>
         </Flex>
-      ) : null}
+      ) : <h2>
+        null</h2>}
     </Flex>
   );
 };

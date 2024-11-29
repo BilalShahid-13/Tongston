@@ -28,7 +28,7 @@ const Home = () => {
         <Rewards />
         <RewardCalculator />
         <SocialSharingEngagement />
-        <Countdown targetDate={targetDate} />
+        {/* <Countdown targetDate={targetDate} /> */}
         <Works />
         <Early_Access />
         <Signup />

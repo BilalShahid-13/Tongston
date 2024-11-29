@@ -35,11 +35,12 @@ const Ai_Chatbot = () => {
   }, [isOpen]);
 
   return (
-    <Flex position="fixed" bottom="0px" right="0px" zIndex="1000">
+    <Flex position="fixed" bottom="0px" right="0px" zIndex="1000" id='chatbot'>
       {/* Chatbot Toggle Button */}
       <Box
         as="button"
         onClick={toggleChatbot}
+        id="chatbotToggle"
         bg="#fff200"
         _hover={{ bg: "#fac913" }}
         transition={"all 0.4s ease"}

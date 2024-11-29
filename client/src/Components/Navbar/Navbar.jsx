@@ -146,7 +146,7 @@ const Navbar = () => {
         <Image
           src="/trogon-logo/SVG/Asset 1.svg"
           alt="Logo"
-          w={{ md: "5vw", lg: "3vw", base: "10vw" }}
+          w={{ md: "3vw", lg: "3vw", base: "7vw" }}
           rounded={"sm"}
         />
         <Flex direction={"column"} gap={"8px"} ref={faviconText}>
@@ -195,6 +195,13 @@ const Navbar = () => {
             color="white"
             fontSize={{ md: "2vw", lg: "1.3vw" }}
             onClick={() => {
+              if (item.name === 'Ask the T-World Chatbot') {
+                // Simulate a click event on the chatbot toggle button
+                const chatbotToggleButton = document.getElementById('chatbotToggle');
+                if (chatbotToggleButton) {
+                  chatbotToggleButton.click();
+                }
+              }
               scrollToSection(item.name);
             }}
             _hover={{
@@ -231,6 +238,13 @@ const Navbar = () => {
               color="white"
               fontSize="2xl"
               onClick={() => {
+                if (item.name === 'Ask the T-World Chatbot') {
+                  // Simulate a click event on the chatbot toggle button
+                  const chatbotToggleButton = document.getElementById('chatbotToggle');
+                  if (chatbotToggleButton) {
+                    chatbotToggleButton.click();
+                  }
+                }
                 scrollToSection(item.name);
                 setIsMenuOpen(false); // Close menu after link click
               }}

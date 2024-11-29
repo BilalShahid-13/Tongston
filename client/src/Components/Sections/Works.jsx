@@ -64,9 +64,15 @@ const Works = () => {
         </Heading>
         <List spacing="2" color="black" ref={textRef}>
           {WorkList.map((benefit, index) => (
-            <ListItem display="flex" alignItems="center" key={index}>
-              <FaCoins style={{ marginRight: "8px", color: "gold" }} />
-              <Text textAlign={"left"}> {benefit}</Text>
+            <ListItem display="flex" alignItems="center"
+              key={index} gap={'1vw'}>
+              <Box minW="30px" display="flex" justifyContent="center">
+                <FaCoins style={{ color: "gold", minWidth: '30px' }} />
+              </Box>
+              <Text
+                textAlign="left" // Align text consistently
+                wordBreak="break-word" // Prevent overflowing of long text
+                whiteSpace="normal" >{benefit}</Text>
             </ListItem>
           ))}
         </List>

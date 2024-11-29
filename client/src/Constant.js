@@ -6,7 +6,7 @@ const NavbarItems = [
     path: "#",
   },
   {
-    name: "About Us",
+    name: "How does it Work",
     path: "#about",
   },
   {
@@ -16,6 +16,10 @@ const NavbarItems = [
   {
     name: "Contact",
     path: "#contact",
+  },
+  {
+    name: "Ask the T-World Chatbot",
+    path: "#chatbot",
   },
 ];
 
@@ -287,10 +291,10 @@ const WorkList = [
   "Free Sign up & EARN",
   "Set up your profile & EARN.",
   "Set up your goals & EARN.",
-  "T-World’s AI starts learning from your profile, goals and actions, creating personalized solutions in education, enterprise, media & finance to attain your goals.",
   "Climb the leaderboards and show off your achievements.",
   "Earn rewards—both cash and toins—every time you complete",
   "activities, reach milestones towards your goals, and even refer friends. Where should I place this content?",
+  "T-World’s AI starts learning from your profile, goals and actions, creating personalized solutions in education, enterprise, media & finance to attain your goals.",
 ];
 
 const Footer = [
@@ -395,6 +399,7 @@ import {
   FacebookShareButton,
   WhatsappShareButton,
   TwitterShareButton,
+  LinkedinShareButton,
 } from "react-share";
 const ReferralLinks = [
   {
@@ -407,11 +412,11 @@ const ReferralLinks = [
     name: "twitter",
     component: TwitterShareButton,
   },
-  // {
-  //   icon: FaInstagram,
-  //   name: "Whatsapp",
-  //   component: WhatsappShareButton,
-  // },
+  {
+    icon: FaLinkedinIn,
+    name: "Linkedin",
+    component: LinkedinShareButton,
+  },
 ];
 
 function scrollToSection(element) {

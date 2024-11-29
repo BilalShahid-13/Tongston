@@ -135,20 +135,18 @@ const Rewards = () => {
             gap='1vh' w={{ md: "70%", lg: "100%", base: "100%" }}>
             <Flex display={'flex'} flexDir={'row'} justifyContent={'center'}
               alignItems={'center'}>
-              <Image ref={headingRef} src="/toins.png" w={{ md: "30%", lg: "20%", base: "20%" }} />
+              <Image ref={headingRef} src="/toins.png" minW={{ md: "30%", lg: "20%", base: "20%" }} />
               <Heading
                 textColor={"black"}
                 textAlign={{ md: "center", lg: "center", base: "center" }}
                 fontFamily={"montserrat"}
-                w={{ md: "full", lg: "75%", base: "70%" }}
+                minW={{ md: "75%", lg: "75%", base: "65%" }}
                 ref={headingRef}
                 fontSize={{ md: "xl", lg: "3xl", base: "sm" }}
               >
                 COLLECT TOINS WITH EVERY ACTION ON T-WORLD
               </Heading>
             </Flex>
-            <Text fontFamily={"montserrat"}
-              fontSize={{ md: "lg", lg: "xl", base: "sm" }}>COLLECT TOINS</Text>
           </Flex>
           <Flex ref={titleImg} w={{ md: "60%", base: "50%", lg: "50%" }}>
             <video
@@ -234,7 +232,7 @@ const Rewards = () => {
                         <Image
                           src={item.src}
                           alt=""
-                          w={{ md: "5vw", lg: "3vw", base: "9vw" }}
+                          w={{ md: "3vw", lg: "3vw", base: "9vw" }}
                           filter="drop-shadow(0px 4px 8px rgba(250, 201, 20, 0.4))"
                         />
                         <Flex
@@ -276,7 +274,8 @@ const Rewards = () => {
                         <Image
                           src="/toins.png"
                           alt=""
-                          width={{ md: "3.5vw", lg: "2.8vw", base: "10vw" }}
+                          maxW={{ md: "3.5vw", lg: "2.8vw", base: "10vw" }}
+                          minW={{ md: "3.5vw", lg: "2.8vw", base: "9vw" }}
                         />
                         <Text
                           ref={(el) => (toinsRefs.current[index] = el)}
