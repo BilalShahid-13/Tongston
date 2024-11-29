@@ -234,7 +234,8 @@ const Signup = () => {
       );
       if (response.status === 201) {
         const { userId } = response.data;
-        await sendEmail(firstName, email);
+
+        await sendEmail(firstName, email, response.data.referral.referralCode);
         toast({
           title: "Congratulations!",
           description:
@@ -243,7 +244,7 @@ const Signup = () => {
           duration: 5000,
           isClosable: true,
         });
-        Clear();
+        // Clear();
         setReferralCode(response.data.referral.referralCode);
         setReferralCount(response.data.referral.referralCount);
         if (
