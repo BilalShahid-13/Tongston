@@ -138,10 +138,11 @@ const Rewards = () => {
               <Image ref={headingRef} src="/toins.png" w={{ md: "30%", lg: "20%", base: "20%" }} />
               <Heading
                 textColor={"black"}
-                textAlign={{ md: "center", lg: "right", base: "center" }}
+                textAlign={{ md: "center", lg: "center", base: "center" }}
                 fontFamily={"montserrat"}
+                w={{ md: "full", lg: "75%", base: "70%" }}
                 ref={headingRef}
-                fontSize={{ md: "lg", lg: "2xl", base: "sm" }}
+                fontSize={{ md: "xl", lg: "3xl", base: "sm" }}
               >
                 COLLECT TOINS WITH EVERY ACTION ON T-WORLD
               </Heading>

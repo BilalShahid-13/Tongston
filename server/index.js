@@ -17,7 +17,8 @@ const corsOptions = {
 };
 
 // Middleware setup
-app.use(cors({ corsOptions })); // Allow cross-origin requests
+// app.use(cors({ corsOptions })); // Allow cross-origin requests
+app.use(cors({ origin: "*" })); // Allow cross-origin requests
 app.use(express.json());
 app.use(bodyParser.json()); // Parse JSON bodies from incoming requests
 
