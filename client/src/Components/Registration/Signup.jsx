@@ -183,8 +183,7 @@ const Signup = () => {
 
   async function Signup() {
     if (Validate()) {
-      // await apiCall();
-      await sendEmail(firstName, email, referredBy);
+      await apiCall();
     }
   }
 
