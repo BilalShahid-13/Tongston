@@ -249,7 +249,7 @@ const Signup = () => {
           duration: 5000,
           isClosable: true,
         });
-        // Clear();
+        Clear();
         setReferralCode(response.data.referral.referralCode);
         setReferralCount(response.data.referral.referralCount);
         if (
