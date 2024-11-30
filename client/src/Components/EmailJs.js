@@ -27,6 +27,7 @@ Welcome to the world of possibilities! We are excited to support you in becoming
 
 If you have any questions or need assistance, feel free to contact us at t-world@tongston.com
 Share your Referral Link: ${referralUrl}
+Invite your friends to T-World and earn even more rewards!
 
 Best wishes,
 The T-World Team`,

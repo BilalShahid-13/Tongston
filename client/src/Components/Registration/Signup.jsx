@@ -218,6 +218,7 @@ const Signup = () => {
       // Making the POST request to the backend
       const response = await axios.post(
         "https://tongston-api.vercel.app/register/signup",  // Use your correct API URL
+        // "http://localhost:8000/register/signup",  // Use your correct API URL
         {
           firstName,
           email,
@@ -239,7 +240,6 @@ const Signup = () => {
       );
       if (response.status === 201) {
         const { userId } = response.data;
-
         await sendEmail(firstName, email, response.data.referral.referralCode);
         toast({
           title: "Congratulations!",
@@ -249,7 +249,7 @@ const Signup = () => {
           duration: 5000,
           isClosable: true,
         });
-        Clear();
+        // Clear();
         setReferralCode(response.data.referral.referralCode);
         setReferralCount(response.data.referral.referralCount);
         if (
